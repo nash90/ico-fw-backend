@@ -1,0 +1,172 @@
+{
+	"SESSION_IS_EXPIRED": {
+		"en": "Session is expired",
+		"jp": "セッションの有効期限が切れています"
+	},
+	"INVALID_USER_PASSWORD": {
+		"en": "Invalid email or password",
+		"jp": "メールアドレスまたはパスワードが違います"
+	},
+	"USER_INFORMATION_UPDATED": {
+		"en": "User information updated",
+		"jp": "ユーザー情報が更新されました"
+	},
+	"ERROR_SAVING_DATA": {
+		"en": "Error in saving data",
+		"jp": "データの保存する際にエラーが発生しました"
+	},
+	"USER_STATUS_UPDATED": {
+		"en": "User status is updated",
+		"jp": "ユーザー情報が更新されました"
+	},
+	"VALIDATION_NOT_BLANK": {
+		"en": "Value should not be blank",
+		"jp": "空欄項目も入力して下さい"
+	},
+	"VALIDATION_SIZE_MAX_255": {
+		"en": "Value should not be more than 255 characters long",
+		"jp": "255文字以内で入力して下さい"
+	},
+	"VALIDATION_SIZE_MAX_30": {
+		"en": "Value should not be more than 30 characters long",
+		"jp": "30文字以内で入力して下さい"
+	},
+	"VALIDATION_NOT_NULL": {
+		"en": "Valud should not be null",
+		"jp": "空欄項目も入力して下さい"
+	},
+	"VALIDATION_BLANK_NAME": {
+		"en": "Name should not be blank",
+		"jp": "名前が空欄になっています"
+	},
+	"EMAIL_IS_REQUIRED": {
+		"en": "Email is required",
+		"jp": "メールアドレスは必須です"
+	},
+	"PASSWORD_IS_REQUIRED": {
+		"en": "Password is required",
+		"jp": "パスワードが必要です"
+	},
+	"VALIDATION_EMAIL_BLANK": {
+		"en": "Email address is required",
+		"jp": "メールアドレスは必須です"
+	},
+	"VALIDATION_EMAIL_MAX": {
+		"en": "Email address is too long",
+		"jp": "メールアドレスが長すぎます"
+	},
+	"VALIDATION_EMAIL_FORMAT": {
+		"en": "Email format is not valid",
+		"jp": "メール形式が無効です"
+	},
+	"VALIDATION_FIRSTNAME_BLANK": {
+		"en": "First name is required",
+		"jp": "名前は必須です"
+	},
+	"VALIDATION_FIRSTNAME_MAX": {
+		"en": "First name should be less than 255 characters",
+		"jp": "名前は255文字以内で入力して下さい"
+	},
+	"VALIDATION_LASTNAME_MAX": {
+		"en": "Last name should be less than 255 characters",
+		"jp": "名字は255文字以内で入力して下さい"
+	},
+	"VALIDATION_PASSWORD_TOO_SHORT(n)": {
+		"en": "Password should be at least %1$d characters long",
+		"jp": "パスワードは%1$d文字以上にする必要です"
+	},
+	"VALIDATION_PASSWORD_WITHOUT_NUMERIC": {
+		"en": "Password should have at least one numeric character",
+		"jp": "パスワードは少なくとも1つの数字を含む必要があります"
+	},
+	"VALIDATION_PASSWORD_WITHOUT_ALPHABETIC": {
+		"en": "Password should contain at least one alphabetic character",
+		"jp": "パスワードは少なくとも1文字の英字を含む必要があります"
+	},
+	"MAIL_USER_BLOCK_SUBJECT": {
+		"en": "Your Account is Blocked",
+		"jp": "あなたのアカウントはブロックされています"
+	},
+	"MAIL_USER_BLOCK_CONTENT": {
+		"en": [
+			"Dear %1$s,",
+			"",
+			"Unfortunately your account is blocked due to containing inappropriate contents. Please contact support for details.",
+			"",
+			"",
+			"With Warm Regards,",
+			"",
+			""
+		],
+		"jp": [
+			"%1$s様",
+			"",
+			"大変恐れ入りますが、不適切なコンテンツが含まれていた為、あなたのアカウントはブロックされています。",
+			"詳細はサポートセンターにお問い合わせください。",
+			"",
+			"",
+			"",
+			",",
+			"",
+			""
+		]
+	},
+	"NAME(first, last)": {
+		"en": "%1$s %2$s",
+		"jp": "%2$s %1$s"
+	},
+	"EMAIL_RECOVERY(name, url)": {
+		"en": [
+			"Dear %1$s,",
+			"",
+			"We are sending you this email because it appears that you have recently requested for password recovery.",
+			"",
+			"Click on the following link to proceed with resseting your password:",
+			"",
+			"%2$s",
+			"",
+			"With Warm Regards,",
+			"",
+			""
+		]
+	},
+	"EMAIL_VERIFICATION(name, url)": {
+		"en": [
+			"Dear %1$s,",
+			"",
+			"Thank you very much for creating an account with Bluewall Japan Inc.",
+			"In order to activate your account please click on the following link to verify your email address.",
+			"",
+			"%2$s",
+			"",
+			"With Warm Regards,",
+			"",
+			""
+		],
+		"jp": [
+			"%1$sさん、",
+			"",
+			"アカウント作って頂き誠にありがとうございました。",
+			"アカウントを有効にするには、以下のリンクをクリックしてメールアドレスを確認してください。",
+			"",
+			"%2$s",
+			"",
+			"どうぞよろしくお願いします",
+			""
+		]
+	},
+	"EMAIL_HASH(hash)": {
+		"en": [
+			"Hash set to following value,",
+			"",
+			"%1$s",
+			""
+		],
+		"jp": [
+			"ハッシュは次のように設定されました。",
+			"",
+			"%1$s",
+			""
+		]
+	}
+}
