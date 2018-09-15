@@ -19,6 +19,7 @@ import play.mvc.Filter;
 import play.mvc.Http;
 import play.mvc.Result;
 import secure.Vault;
+import service.PurchaseQueueConsumerService;
 import serviceImpl.ApplicationConfigurationService.CONFIGURATION;
 import common.ServerException;
 
@@ -27,14 +28,17 @@ public class CustomFilter
         Filter
 {
 	serviceImpl.ApplicationConfigurationService config;
+	PurchaseQueueConsumerService purchaseQueueConsumer;
 
 	@Inject
 	public CustomFilter(
 	                    Materializer mat,
-	                    serviceImpl.ApplicationConfigurationService config)
+	                    serviceImpl.ApplicationConfigurationService config,
+						PurchaseQueueConsumerService purchaseQueueConsumer)
 	{
 		super(mat);
 		this.config = config;
+		this.purchaseQueueConsumer = purchaseQueueConsumer;
 	}
 
 	@Override
@@ -72,6 +76,7 @@ public class CustomFilter
 				e.printStackTrace();
 				throw new ServerException("Wallet key configuration error!!");
 			}
+			purchaseQueueConsumer.startQueueConsumer();
 		}
 		
 		if (!Vault.getInstance()

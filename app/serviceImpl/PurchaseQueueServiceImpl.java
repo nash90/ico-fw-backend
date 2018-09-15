@@ -3,9 +3,12 @@ package serviceImpl;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.function.Predicate;
+
+import com.google.inject.Singleton;
 import model.PaymentTransaction;
 import service.PurchaseQueueService;
 
+@Singleton
 public class PurchaseQueueServiceImpl
     implements
         PurchaseQueueService
