@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
 	"javax.json" % "javax.json-api" % "1.0",
 	"org.hibernate" % "hibernate-core" % "5.2.12.Final",
 	"com.h2database" % "h2" % "1.4.197",
+	"mysql" % "mysql-connector-java" % "5.1.41",
 	"com.squareup.okhttp" % "okhttp" % "2.7.0",
 	
 	//validation

@@ -14,4 +14,15 @@
 		</properties>
 	</persistence-unit>
 
+	<persistence-unit name="mysqlPersistenceUnit"
+					  transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<non-jta-data-source>DefaultDS</non-jta-data-source>
+		<properties>
+			<property name="hibernate.archive.autodetection" value="class" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+
 </persistence>

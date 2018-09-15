@@ -1,2 +1,2 @@
 #!/bin/sh
-sbt "run 9000"
+sbt -Dconfig.file=conf/dev-local.conf "run 9000"
