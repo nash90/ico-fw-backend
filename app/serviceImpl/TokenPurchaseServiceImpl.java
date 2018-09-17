@@ -1,6 +1,7 @@
 package serviceImpl;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
@@ -43,6 +44,7 @@ public class TokenPurchaseServiceImpl
 	private static final String	TRUE						= "true";
 	private static final int	MAX_LENGTH					= 2048;
 	private static final int	SECOND_INTO_MILLI			= 1000;
+	private static final int	DECIMAL_PRECISION			= 2;
 	private final static String	DATE_TIME_ZONE_FORMAT		= "yyyy-MM-dd HH:mm:ss XXX";
 	private final static String	WITHDRAW_REQUEST_MSG		= "Withdraw requested at :";
 	private final static String	TRANSACTION_NOT_IN_QUEUE	= "Transaction is not in queue";
@@ -324,7 +326,7 @@ public class TokenPurchaseServiceImpl
 				                              .equals(TRUE))
 				{
 					rate = new BigDecimal(CONFIGURATION.ETH_RATE.getValue());
-					token = amount.divide(rate);
+					token = amount.divide(rate, DECIMAL_PRECISION, RoundingMode.HALF_UP);
 				} else
 				{
 					throw new ServerException(Currency.ETH + INVALID_CURRENCY);
@@ -335,7 +337,7 @@ public class TokenPurchaseServiceImpl
 				                              .equals(TRUE))
 				{
 					rate = new BigDecimal(CONFIGURATION.BTC_RATE.getValue());
-					token = amount.divide(rate);
+					token = amount.divide(rate, DECIMAL_PRECISION, RoundingMode.HALF_UP);
 				} else
 				{
 					throw new ServerException(Currency.BTC + INVALID_CURRENCY);
@@ -346,7 +348,8 @@ public class TokenPurchaseServiceImpl
 				                               .equals(TRUE))
 				{
 					rate = new BigDecimal(CONFIGURATION.LTCT_RATE.getValue());
-					token = amount.divide(rate);
+					Logger.debug("rate: "+rate.toPlainString());
+					token = amount.divide(rate, DECIMAL_PRECISION, RoundingMode.HALF_UP);
 				} else
 				{
 					throw new ServerException(Currency.LTCT + INVALID_CURRENCY);
